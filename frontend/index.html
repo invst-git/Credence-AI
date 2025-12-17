@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Credence AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Credence AI - Personal Loan Eligibility and Document Verification" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-root">
+    <div class="chat-shell">
+      <header class="chat-header">
+        <div class="brand-row">
+          <div class="brand-text">
+            <div class="brand-name">Credence AI</div>
+          </div>
+        </div>
+        <div class="header-caption">
+          <span id="agentStatus" class="agent-badge">Master Agent</span>
+          <div class="header-actions">
+            <button id="applyBtn" class="btn-primary-sm" title="Start Loan Application">Apply Loan</button>
+            <button id="newChatBtn" class="new-chat-btn" title="Start new conversation">New Chat</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="chat" class="chat-body"></main>
+
+      <!-- Document Capture Modal -->
+      <div id="captureModal" class="capture-modal hidden">
+        <div class="capture-modal-content">
+          <div class="capture-header">
+            <h3 id="captureTitle">Capture Selfie</h3>
+            <button id="closeCaptureBtn" class="close-btn">&times;</button>
+          </div>
+          <div class="capture-body">
+            <video id="cameraPreview" autoplay playsinline></video>
+            <canvas id="captureCanvas" class="hidden"></canvas>
+            <img id="capturedImage" class="hidden" alt="Captured" />
+          </div>
+          <div class="capture-actions">
+            <button id="captureBtn" class="btn-primary">
+              Capture
+            </button>
+            <button id="retakeBtn" class="btn-secondary hidden">
+              Retake
+            </button>
+            <button id="confirmCaptureBtn" class="btn-success hidden">
+              Use Photo
+            </button>
+          </div>
+          <div class="capture-tips">
+            <p id="captureTips">Position your face in the center</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="chat-input-bar">
+        <button id="cameraBtn" class="camera-btn hidden" title="Open Camera">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+        </button>
+        <input id="input" type="text" placeholder="Type your message..." autocomplete="off" />
+        <button id="sendBtn">Send</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- OTP Notification removed - no longer showing test OTP -->
+  <div id="otpNotification" class="otp-notification" style="display: none;"></div>
+  <span id="otpNotificationCode" style="display: none;"></span>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

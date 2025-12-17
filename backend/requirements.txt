@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+langgraph
+langgraph-checkpoint-sqlite
+anthropic
+pydantic
+pydantic-settings
+python-dotenv
+httpx
+psycopg2-binary
+thefuzz
