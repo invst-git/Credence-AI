@@ -386,8 +386,8 @@ Main conversation endpoint.
 **Request:**
 ```json
 {
-    "thread_id": "thread_abc123",
-    "user_message": "I want to apply for a loan",
+    "thread_id": "sample_thread",
+    "user_message": "I want to apply for a personal loan",
     "image_data": "base64_encoded_image",
     "image_type": "selfie"
 }
