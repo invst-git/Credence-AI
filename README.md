@@ -28,7 +28,7 @@ Credence automates the personal loan application process using a sophisticated m
 2. **Identity Verification** - Selfie capture and Aadhaar OCR with face matching
 3. **Document Collection** - Automated upload and verification of financial documents
 4. **Credit Underwriting** - Scoring-based loan decisioning
-5. **Sanction Letter Generation** - Instant PDF generation upon approval
+5. **Sanction Letter Generation** - Instant PDF generation post approval
 
 ---
 
